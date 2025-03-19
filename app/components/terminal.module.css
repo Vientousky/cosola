@@ -1,0 +1,225 @@
+/* Root variables for consistent theming */
+:root {
+  --terminal-bg: #0d1117;
+  --terminal-border: rgb(39, 167, 39);
+  --terminal-text: #c9d1d9;
+  --terminal-highlight: #39e46c;
+  --terminal-secondary: #b9bcc2;
+  --terminal-section-bg: rgba(255, 255, 255, 0.05);
+  --terminal-border-color: #30363d;
+  --border-radius: 8px;
+  --spacing-sm: 8px;
+  --spacing-md: 10px;
+  --spacing-lg: 20px;
+}
+
+
+.terminal {
+  max-width: 700px;
+  width: 90%;
+  background-color: var(--terminal-bg);
+  border: 1px solid var(--terminal-border);
+  color: var(--terminal-text);
+  padding: 1.25rem;
+  border-radius: var(--border-radius);
+  margin: auto;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s ease-in-out;
+
+  &:hover {
+    border-color: var(--terminal-highlight);
+  }
+}
+
+.projects, .contact, .article  {
+  background-color: var(--terminal-section-bg);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-top: var(--spacing-md);
+  border-left: 2px solid var(--terminal-border-color);
+  transition: 0.3s ease-in-out;
+}
+
+.bienvenida {
+  background-color: var(--terminal-section-bg);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.25rem;
+  border-left: 2px solid var(--terminal-highlight);
+
+  & h2 {
+    margin-bottom: 1rem;
+    color: var(--terminal-highlight);
+  }
+
+  & p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.4;
+  }
+
+  & h4 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--terminal-secondary);
+    margin-top: var(--spacing-md);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: 1.2rem;
+  color: var(--terminal-highlight);
+  border-bottom: 2px solid var(--terminal-border-color);
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.command {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 1rem;
+  padding-left: var(--spacing-sm);
+
+  & span {
+    color: var(--terminal-highlight);
+    font-weight: bold;
+
+    &::before {
+      content: '>';
+      margin-right: var(--spacing-sm);
+      opacity: 0.7;
+    }
+  }
+}
+
+
+.formulario {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) 0;
+  margin-top: var(--spacing-md);
+  border-top: 1px dashed var(--terminal-border-color);
+
+  & span {
+    color: var(--terminal-highlight);
+    font-weight: bold;
+  }
+
+}
+
+.retro {
+  background: none;
+  border: none;
+  color: var(--terminal-text);
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px dashed var(--terminal-border-color);
+
+  &:focus {
+    border-bottom: 1px dashed var(--terminal-highlight);
+  }
+}
+
+/* aqui los texto */
+
+.article {
+
+  &:hover {
+    border-left-color: var(--terminal-highlight);
+  }
+
+  & h4, & h2, & h4 {
+    font-size: 1.4rem;
+    color: var(--terminal-highlight);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  & p {
+    margin: var(--spacing-sm) 0;
+    line-height: 1.6;
+  }
+
+  & ul {
+    list-style: none;
+    display: grid;
+    gap: var(--spacing-sm);
+    padding-left: var(--spacing-md);
+
+    & li {
+      display: grid;
+      grid-template-columns: 13ch auto;
+    }
+  }
+
+  & strong {
+    color: var(--terminal-highlight);
+  }
+  
+  
+}
+
+.projects {
+
+  &:hover {
+    border-left-color: var(--terminal-highlight);
+  }
+
+  & h1 {
+    font-size: 1.4rem;
+    color: var(--terminal-highlight);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  & p{
+    margin: var(--spacing-sm) 0;
+    line-height: 1.6;
+  }
+
+  & a {
+    width: fit-content;
+    margin-top: 10px; 
+  }
+
+  & ul {
+    display: grid;
+    gap: 1rem;
+    padding-left: var(--spacing-md);
+    padding-bottom:1rem ;
+
+    & li {
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .terminal {
+    padding: var(--spacing-md);
+  }
+  
+  .header {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal {
+    padding: var(--spacing-sm);
+  }
+  
+  .bienvenida,
+  .article {
+    padding: var(--spacing-sm);
+  }
+}
