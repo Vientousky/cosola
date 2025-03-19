@@ -1,18 +1,3 @@
-/* Root variables for consistent theming */
-:root {
-  --terminal-bg: #0d1117;
-  --terminal-border: rgb(39, 167, 39);
-  --terminal-text: #c9d1d9;
-  --terminal-highlight: #39e46c;
-  --terminal-secondary: #b9bcc2;
-  --terminal-section-bg: rgba(255, 255, 255, 0.05);
-  --terminal-border-color: #30363d;
-  --border-radius: 8px;
-  --spacing-sm: 8px;
-  --spacing-md: 10px;
-  --spacing-lg: 20px;
-}
-
 
 .terminal {
   max-width: 700px;
